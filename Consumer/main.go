@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	//TODO - Adicionar autenticação pra request para não precisar o faas-cli
 	fileBeingRead, err := ioutil.ReadFile("../example.csv")
 	checkError("failed during read fileBeingRead", err)
 	req, err := http.NewRequest("POST", "http://127.0.0.1:8080/function/csv-to-xlsx.openfaas-fn", bytes.NewReader(fileBeingRead))

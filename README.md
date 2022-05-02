@@ -23,4 +23,19 @@ kubectl --context k3d-testopen get pods -n openfaas-fn
 cat "./example.csv" | faas-cli invoke csv-to-xlsx > converted-example.xlsx
 ```
 
+## USING A TEMPLATE
+```bash
+faas-cli template store pull golang-middleware ## Documentar o processo melhor
+faas-cli new logtest --lang golang-middleware
+```
+
 More information: https://www.openfaas.com/
+
+# Resources
+[https://docs.openfaas.com/deployment/troubleshooting/](https://docs.openfaas.com/deployment/troubleshooting/)
+
+[https://iximiuz.com/en/posts/openfaas-case-study/](https://iximiuz.com/en/posts/openfaas-case-study/)
+
+[https://blog.alexellis.io/cli-functions-with-openfaas/](https://blog.alexellis.io/cli-functions-with-openfaas/)
+
+[https://mholt.github.io/curl-to-go/](https://mholt.github.io/curl-to-go/)
